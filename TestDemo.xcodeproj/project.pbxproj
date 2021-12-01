@@ -17,6 +17,8 @@
 		2E177D1D274730BE00036FCF /* TestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E177D1C274730BE00036FCF /* TestDemoTests.swift */; };
 		2E177D27274730BE00036FCF /* TestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E177D26274730BE00036FCF /* TestDemoUITests.swift */; };
 		2E177D29274730BE00036FCF /* TestDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E177D28274730BE00036FCF /* TestDemoUITestsLaunchTests.swift */; };
+		2EBBAA14274F5BAF00EF82CD /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBBAA13274F5BAF00EF82CD /* TestCase.swift */; };
+		2EBBAA16274F5BD300EF82CD /* TestCaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBBAA15274F5BD300EF82CD /* TestCaseClass.swift */; };
 		38E14A541A4F68D3FA398886 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6EC95DCB5334DCBEAE0D4C /* Pods_TestDemo.framework */; };
 		92BE9D1152C66ADA580D0194 /* Pods_TestDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DFB41DADF70548955A82AF /* Pods_TestDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,9 @@
 		2E177D22274730BE00036FCF /* TestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E177D26274730BE00036FCF /* TestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITests.swift; sourceTree = "<group>"; };
 		2E177D28274730BE00036FCF /* TestDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2EBBAA13274F5BAF00EF82CD /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		2EBBAA15274F5BD300EF82CD /* TestCaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaseClass.swift; sourceTree = "<group>"; };
+		2EBBAA382754E2BA00EF82CD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A2C8DDF19833DBE2A2EA29 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4E6EC95DCB5334DCBEAE0D4C /* Pods_TestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E4474833D8738C453F2582 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +123,8 @@
 			children = (
 				2E177D05274730BB00036FCF /* AppDelegate.swift */,
 				2E177D07274730BB00036FCF /* SceneDelegate.swift */,
+				2EBBAA13274F5BAF00EF82CD /* TestCase.swift */,
+				2EBBAA15274F5BD300EF82CD /* TestCaseClass.swift */,
 				2E177D09274730BB00036FCF /* ViewController.swift */,
 				2E177D0B274730BB00036FCF /* Main.storyboard */,
 				2E177D0E274730BE00036FCF /* Assets.xcassets */,
@@ -160,6 +167,7 @@
 		5CF10C36223E63B681D3E6CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EBBAA382754E2BA00EF82CD /* Quick.framework */,
 				4E6EC95DCB5334DCBEAE0D4C /* Pods_TestDemo.framework */,
 				E40C93A98AD068B336621006 /* Pods_TestDemo_TestDemoUITests.framework */,
 				23DFB41DADF70548955A82AF /* Pods_TestDemoTests.framework */,
@@ -416,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBBAA16274F5BD300EF82CD /* TestCaseClass.swift in Sources */,
 				2E177D1D274730BE00036FCF /* TestDemoTests.swift in Sources */,
+				2EBBAA14274F5BAF00EF82CD /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +509,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -560,6 +571,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -586,8 +598,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20211122.03;
+				CURRENT_PROJECT_VERSION = 20211123.03;
 				DEVELOPMENT_TEAM = 959KGUYXM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -604,7 +617,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyds.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,8 +630,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20211122.03;
+				CURRENT_PROJECT_VERSION = 20211123.03;
 				DEVELOPMENT_TEAM = 959KGUYXM2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -635,7 +649,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyds.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,27 +1,14 @@
 //
-//  TestDemoTests.swift
+//  TestCaseClass.swift
 //  TestDemoTests
 //
-//  Created by xionghui.xu on 2021/11/19.
+//  Created by xionghui.xu on 2021/11/25.
 //
 
 import XCTest
-import Quick
-import Nimble
 
-@testable import TestDemo
+class TestCaseClass: XCTestCase {
 
-class TestDemoTests: QuickSpec {
-
-    override func spec() {
-        
-        describe("go") {
-            
-        }
-        
-        
-    }
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

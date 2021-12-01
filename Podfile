@@ -7,6 +7,11 @@ target 'TestDemo' do
 
   pod 'SnapKit', '~> 5.0.1'
   # Pods for TestDemo
+  pod 'XcodeCoverage','~>1.0'
+  pod 'SwifterSwift'
+
+  pod 'Quick'
+  pod 'Nimble'
 
   target 'TestDemoTests' do
     inherit! :search_paths
